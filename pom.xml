@@ -40,6 +40,7 @@
         <module>tasket-core</module>
         <module>tasket-bukkit</module>
         <module>tasket-sponge</module>
+        <module>tasket-bungee</module>
     </modules>
 
     <scm>
@@ -98,6 +99,11 @@
             <dependency>
                 <groupId>pl.kacperduras</groupId>
                 <artifactId>tasket-sponge</artifactId>
+                <version>1.1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>pl.kacperduras</groupId>
+                <artifactId>tasket-bungee</artifactId>
                 <version>1.1.0-SNAPSHOT</version>
             </dependency>
 
