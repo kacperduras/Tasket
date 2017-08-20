@@ -10,7 +10,7 @@
 
     <groupId>pl.kacperduras</groupId>
     <artifactId>tasket-parent</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <packaging>pom</packaging>
 
@@ -88,7 +88,17 @@
             <dependency>
                 <groupId>pl.kacperduras</groupId>
                 <artifactId>tasket-core</artifactId>
-                <version>${project.version}</version>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>pl.kacperduras</groupId>
+                <artifactId>tasket-bukkit</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>pl.kacperduras</groupId>
+                <artifactId>tasket-sponge</artifactId>
+                <version>1.0.0</version>
             </dependency>
 
             <dependency>
@@ -110,11 +120,6 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>pl.kacperduras</groupId>
-            <artifactId>tasket-core</artifactId>
         </dependency>
 
         <dependency>
