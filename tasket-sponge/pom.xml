@@ -16,7 +16,7 @@
     <repositories>
         <repository>
             <id>sponge</id>
-            <url>http://repo.spongepowered.org/maven</url>
+            <url>http://repo.spongepowered.org/maven/</url>
         </repository>
     </repositories>
 
