@@ -50,7 +50,7 @@ public abstract class Tasket {
             tasksMap.computeIfAbsent(instance.getClass(), map -> new ArrayList<>()).add(container);
 
             if (task.timer().period() > 0) {
-                container.start(true);
+                container.start(true, null);
             }
         }
     }
