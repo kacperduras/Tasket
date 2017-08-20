@@ -48,8 +48,15 @@ public abstract class Tasket {
 
             TaskContainer container = new TaskContainer(this, task, instance, method);
             tasksMap.computeIfAbsent(instance.getClass(), map -> new ArrayList<>()).add(container);
+        }
 
-            if (task.timer().period() > 0) {
+        List<TaskContainer> containers = tasksMap.get(instance.getClass());
+        if (containers == null) {
+            return;
+        }
+
+        for (TaskContainer container : containers) {
+            if (container.getAnnotation().timer().period() > 0 && !container.getAnnotation().timer().later()) {
                 container.start(true, null);
             }
         }
