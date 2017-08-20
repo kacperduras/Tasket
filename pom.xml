@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>Tasket</name>
+    <description>Simple and fast task management for Bukkit and Sponge.</description>
+    <inceptionYear>2017</inceptionYear>
+
+    <groupId>pl.kacperduras</groupId>
+    <artifactId>tasket-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <packaging>pom</packaging>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://raw.githubusercontent.com/kacperduras/Sqladect/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>kacperduras</id>
+            <name>Kacper Duras</name>
+            <url>http://kacperduras.pl</url>
+            <email>git@kacperduras.pl</email>
+            <roles>
+                <role>architect</role>
+                <role>developer</role>
+            </roles>
+            <timezone>Europe/Warsaw</timezone>
+        </developer>
+    </developers>
+
+    <modules>
+        <module>tasket-core</module>
+        <module>tasket-bukkit</module>
+        <module>tasket-sponge</module>
+    </modules>
+
+    <scm>
+        <url>http://github.com/kacperduras/Tasket</url>
+        <connection>scm:git:http://github.com/kacperduras/Tasket.git</connection>
+        <developerConnection>scm:git:http://github.com/kacperduras/Tasket.git</developerConnection>
+    </scm>
+
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>http://github.com/kacperduras/Tasket/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Travis CI</system>
+        <url>http://travis-ci.org/kacperduras/Tasket</url>
+    </ciManagement>
+
+    <distributionManagement>
+        <repository>
+            <id>kacperduras-repo</id>
+            <url>https://repo.kacperduras.pl/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>kacperduras-repo</id>
+            <url>https://repo.kacperduras.pl/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>kacperduras-repo</id>
+            <url>https://repo.kacperduras.pl/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.6</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>pl.kacperduras</groupId>
+                <artifactId>tasket-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+                <scope>test</scope>
+            </dependency>
+            <!--<dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>1.7.1</version>
+                <scope>test</scope>
+            </dependency>-->
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <finalName>${project.name} v${project.version}</finalName>
+
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>2.4.3</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+
+    </build>
+
+    
+</project>
