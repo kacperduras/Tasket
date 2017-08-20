@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>Tasket</name>
-    <description>Simple and fast task management for Bukkit and Sponge.</description>
+    <description>Simple and fast task management for Bukkit, Sponge and BungeeCord.</description>
     <inceptionYear>2017</inceptionYear>
 
     <groupId>pl.kacperduras</groupId>
