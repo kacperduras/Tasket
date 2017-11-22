@@ -11,4 +11,4 @@ Simple and fast task management for Bukkit, Sponge and BungeeCord.
 [**See contributing: contributing.md**](CONTRIBUTING.md)
 
 ## License
-[**See contributing: license**](LICENSE)
+[**See license: license**](LICENSE)
